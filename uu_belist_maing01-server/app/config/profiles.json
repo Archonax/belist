@@ -1,0 +1,78 @@
+{
+  "{asid}": {
+    "profileList": ["AsidAuthorities", "AsidExecutives", "AsidLicenseOwner", "Public"],
+    "useCaseMap": {}
+  },
+  "*": {
+    "profileList": ["Authorities", "Executives", "AwidLicenseOwner", "Public", "Authenticated", "AwidInitiator"],
+    "useCaseMap": {
+      "sys/uuAppWorkspace/init": {
+        "sysStateList": ["created", "assigned"],
+        "profileList": ["AwidLicenseOwner", "AwidInitiator"]
+      },
+      "sys/uuAppWorkspace/load": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities", "Executives"]
+      },
+      "sys/uuAppWorkspace/loadBasicData": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      },
+      "defaultUve": {
+        "profileList": ["Public"]
+      },
+      "sys/uuAppWorkspace/initUve": {
+        "sysStateList": ["created"],
+        "profileList": ["Public", "AwidLicenseOwner"]
+      },
+      "helloWorld": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      },
+      "item/add": {
+        "sysStateList": ["active"],
+        "profileList": ["Authenticated"]
+      },
+      "item/remove": {
+        "sysStateList": ["active"],
+        "profileList": ["Authenticated"]
+      },
+      "item/mark": {
+        "sysStateList": ["active"],
+        "profileList": ["Authenticated"]
+      },
+      "shoppinglist/create": {
+        "sysStateList": ["active"],
+        "profileList": ["Executives"]
+      },
+      "shoppinglist/delete": {
+        "sysStateList": ["active"],
+        "profileList": ["Executives"]
+      },
+      "shoppinglist/archive": {
+        "sysStateList": ["active"],
+        "profileList": ["Authenticated"]
+      },
+      "shoppinglist/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      },
+      "shoppinglist/menu": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      },
+      "shoppinglist/invite": {
+        "sysStateList": ["active"],
+        "profileList": ["Executives"]
+      },
+      "shoppinglist/kick": {
+        "sysStateList": ["active"],
+        "profileList": ["Executives"]
+      },
+      "shoppinglist/leave": {
+        "sysStateList": ["active"],
+        "profileList": ["Executives"]
+      }
+    }
+  }
+}
