@@ -32,17 +32,17 @@
         "type": "CMD"
       },
       "item/add": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerE.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "item/remove": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerB.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "item/mark": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerB.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
@@ -52,37 +52,37 @@
         "type": "CMD"
       },
       "shoppinglist/delete": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerB.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "shoppinglist/archive": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerB.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "shoppinglist/get": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerB.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "shoppinglist/menu": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerC.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "shoppinglist/invite": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerD.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "shoppinglist/kick": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerD.create",
         "httpMethod": "POST",
         "type": "CMD"
       },
       "shoppinglist/leave": {
-        "realization": "api/controllers/JokeController.create",
+        "realization": "api/controllers/JokeControllerB.create",
         "httpMethod": "POST",
         "type": "CMD"
       }
