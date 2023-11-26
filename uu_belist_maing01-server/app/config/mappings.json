@@ -32,9 +32,12 @@
         "type": "CMD"
       },
       "item/add": {
-        "realization": "api/controllers/JokeControllerE.create",
+        "realization": "api/controllers/JokeController.additem",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "item/remove": {
         "realization": "api/controllers/JokeControllerB.create",
@@ -52,23 +55,32 @@
         "type": "CMD"
       },
       "shoppinglist/delete": {
-        "realization": "api/controllers/JokeControllerB.create",
+        "realization": "api/controllers/JokeController.delete",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "shoppinglist/archive": {
-        "realization": "api/controllers/JokeControllerB.create",
+        "realization": "api/controllers/JokeController.update",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "shoppinglist/get": {
-        "realization": "api/controllers/JokeControllerB.create",
-        "httpMethod": "POST",
-        "type": "CMD"
+        "realization": "api/controllers/JokeController.get",
+        "httpMethod": "GET",
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "shoppinglist/menu": {
-        "realization": "api/controllers/JokeControllerC.create",
-        "httpMethod": "POST",
+        "realization": "api/controllers/JokeController.list",
+        "httpMethod": "GET",
         "type": "CMD"
       },
       "shoppinglist/invite": {

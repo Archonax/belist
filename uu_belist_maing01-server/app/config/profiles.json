@@ -31,7 +31,7 @@
       },
       "item/add": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Authorities","Executives","Public"]
       },
       "item/remove": {
         "sysStateList": ["active"],
@@ -43,23 +43,23 @@
       },
       "shoppinglist/create": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Authorities","Executives","Public"]
       },
       "shoppinglist/delete": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Authorities","Executives","Public"]
       },
       "shoppinglist/archive": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Authorities","Executives","Public"]
       },
       "shoppinglist/get": {
         "sysStateList": ["active"],
-        "profileList": ["Public"]
+        "profileList": ["Public","Executives","Authorities"]
       },
       "shoppinglist/menu": {
         "sysStateList": ["active"],
-        "profileList": ["Public"]
+        "profileList": ["Public","Executives","Authorities"]
       },
       "shoppinglist/invite": {
         "sysStateList": ["active"],

@@ -10,4 +10,4 @@ class JokeControllerB {
   
 }
 
-module.exports = new JokeControllerB();
+module.exports = new JokeControllerB();//getUuIdentity for user ID

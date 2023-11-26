@@ -7,7 +7,8 @@
   "dependencies": {
     "insomnia-plugin-plus4u-oidc": "^0.2.7",
     "uu_appg01_server": "^5.18.0",
-    "uu_apprepresentationg01": "^2.2.0"
+    "uu_apprepresentationg01": "^2.2.0",
+    "uu_appg01_binarystore-cmd": "^3.0.0"
   },
   "devDependencies": {
     "uu_appg01_devkit": "^5.15.4",

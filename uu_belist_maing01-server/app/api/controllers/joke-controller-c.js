@@ -7,7 +7,12 @@ class JokeControllerC {
     const dtoIn = ucEnv.parameters;
     return JokeAbl.create3(awid, dtoIn);
   }
+  get(ucEnv) {
+    const awid = ucEnv.getUri().getAwid();
+    const dtoIn = ucEnv.parameters;
+    return JokeAbl.create3(awid, dtoIn);
+  }
   
 }
 
-module.exports = new JokeControllerC();
+module.exports = new JokeControllerC();//getUuIdentity for user ID

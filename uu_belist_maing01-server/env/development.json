@@ -1,7 +1,8 @@
 {
   "port": 8080,
   "uuSubAppDataStoreMap": {
-    "primary": "mongodb://127.0.0.1:27017/belistMainPrimary"
+    "primary": "mongodb://127.0.0.1:27017/belistMainPrimary",
+    "binary": "mongodb://127.0.0.1:27017/belistMainBinary"
   },
   "asid_license_owner_list": ["7337-1132-7592-0000"],
   "asid": "11111111111111111111111111111111",

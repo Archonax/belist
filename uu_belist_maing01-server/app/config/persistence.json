@@ -1,11 +1,37 @@
+
+
 {
+  "maxNoa": 100,
   "uuSubAppDataStore": {
     "primary": {
       "type": "uuAppObjectStore",
       "realization": "MongoDB",
       "schemaMap": {
         "belistMain": {
-          "realization": "dao/BelistMainMongo"
+          "realization": "dao/BelistMainMongo",
+          "maxNoi": 1
+        },
+        "category": {
+          "realization": "dao/CategoryMongo",
+          "maxNoi": 128
+        },
+        "joke": {
+          "realization": "dao/JokeMongo",
+          "maxNoi": 1000
+        },
+        "jokeRating": {
+          "realization": "dao/JokeRatingMongo",
+          "maxNoi": 10000
+        }
+      }
+    },
+    "binary": {
+      "type": "uuAppBinaryStore",
+      "realization": "MongoDB",
+      "schemaMap": {
+        "uuBinary": {
+          "realization": "uu_appg01_binarystore-cmd:dao/UuAppBinarystoreMongo",
+          "maxSob": 5242880
         }
       }
     }
