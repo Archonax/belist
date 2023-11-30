@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-const jokeCreateDtoInTypeOUTDATED = shape({
+/*const jokeCreateDtoInTypeOUTDATED = shape({
     name: string(3, 255).isRequired(),
     uuIdentity: string(1,32).isRequired(),
   });
@@ -19,7 +19,7 @@ const jokeCreateDtoInTypeOUTDATED = shape({
   const jokeCreateDtoInType5 = shape({
     name: string(3, 255).isRequired(),
     text: string(3, 4000).isRequired(),
-  });
+  });*/
   const jokeListDtoInType = shape({
     sortBy: oneOf(["name", "averageRating"]),
     order: oneOf(["asc", "desc"]),
@@ -39,9 +39,10 @@ const jokeCreateDtoInTypeOUTDATED = shape({
   });
   const jokeUpdateDtoInType = shape({
     id: id().isRequired(),
-    name: uu5String(255),
-    text: uu5String(4000),
-    categoryIdList: array(id(), 10),
+    //name: uu5String(255),
+    //text: uu5String(4000),
+    //categoryIdList: array(id(), 10),
+    visibility: oneOf([true,false])
   });
   const jokeDeleteDtoInType = shape({
     id: id().isRequired()
