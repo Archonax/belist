@@ -35,11 +35,11 @@
       },
       "item/remove": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Authorities","Executives","Public"]
       },
       "item/mark": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Authorities","Executives","Public"]
       },
       "shoppinglist/create": {
         "sysStateList": ["active"],
@@ -63,15 +63,15 @@
       },
       "shoppinglist/invite": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Public","Executives","Authorities"]
       },
       "shoppinglist/kick": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Public","Executives","Authorities"]
       },
       "shoppinglist/leave": {
         "sysStateList": ["active"],
-        "profileList": ["Authenticated"]
+        "profileList": ["Public","Executives","Authorities"]
       }
     }
   }

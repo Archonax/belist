@@ -48,5 +48,22 @@ const jokeCreateDtoInTypeOUTDATED = shape({
   });
   const jokeAddItemDtoInType = shape({
     id: id().isRequired(),
-    name: uu5String(255).isRequired(),
+    categoryIdList: array(id(), 10),
   })
+  const jokeRemoveItemDtoInType = shape({
+    id: id().isRequired(),
+    categoryIdList: array(id(), 10),
+  });
+  const jokeMarkItemDtoInType = shape({
+    id: id().isRequired(),
+    categoryIdList: array(id(), 10),
+  });
+  const jokeInviteDtoInType = shape({
+    id: id().isRequired()
+  });
+  const jokeKickDtoInType = shape({
+    id: id().isRequired()
+  });
+  const jokeLeaveDtoInType = shape({
+    id: id().isRequired()
+  });

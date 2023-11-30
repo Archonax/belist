@@ -6,6 +6,11 @@ const CreateAbl = require("../../abl/joke/create-abl");
 const UpdateAbl = require("../../abl/joke/update-abl");
 const DeleteAbl = require("../../abl/joke/delete-abl");
 const AdditemAbl = require("../../abl/joke/additem-abl");
+const RemoveitemAbl= require("../../abl/joke/removeitem-abl");
+const MarkitemAbl= require("../../abl/joke/markitem-abl");
+const InviteAbl = require("../../abl/joke/invite-abl");
+const KickAbl = require("../../abl/joke/kick-abl");
+const LeaveAbl = require("../../abl/joke/leave-abl");
 class JokeController {
   /*OUTDATEDcreate(ucEnv) {
     const awid = ucEnv.getUri().getAwid();
@@ -29,6 +34,21 @@ class JokeController {
   }
   /*static*/ additem(ucEnv) {
     return AdditemAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
+  }
+  /*static*/ removeitem(ucEnv) {
+    return RemoveitemAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
+  }
+  /*static*/ markitem(ucEnv) {
+    return MarkitemAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
+  }
+  /*static*/ invite(ucEnv) {
+    return InviteAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
+  }
+  /*static*/ kick(ucEnv) {
+    return KickAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
+  }
+  /*static*/ leave(ucEnv) {
+    return LeaveAbl.update(ucEnv.getUri().getAwid(), ucEnv.parameters, ucEnv.session, ucEnv.getAuthorizationResult());
   }
 }
 

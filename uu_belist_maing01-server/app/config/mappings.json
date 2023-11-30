@@ -40,14 +40,20 @@
         }
       },
       "item/remove": {
-        "realization": "api/controllers/JokeControllerB.create",
+        "realization": "api/controllers/JokeController.removeitem",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "item/mark": {
-        "realization": "api/controllers/JokeControllerB.create",
+        "realization": "api/controllers/JokeController.markitem",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "shoppinglist/create": {
         "realization": "api/controllers/JokeController.create",
@@ -84,19 +90,28 @@
         "type": "CMD"
       },
       "shoppinglist/invite": {
-        "realization": "api/controllers/JokeControllerD.create",
+        "realization": "api/controllers/JokeController.invite",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "shoppinglist/kick": {
-        "realization": "api/controllers/JokeControllerD.create",
+        "realization": "api/controllers/JokeController.kick",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       },
       "shoppinglist/leave": {
-        "realization": "api/controllers/JokeControllerB.create",
+        "realization": "api/controllers/JokeController.leave",
         "httpMethod": "POST",
-        "type": "CMD"
+        "type": "CMD",
+        "dtoInAuditMap": {
+          "id": "$.id"
+        }
       }
     }
   }
