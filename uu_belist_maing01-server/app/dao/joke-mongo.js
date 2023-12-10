@@ -54,8 +54,12 @@ class JokeMongo extends UuObjectDao {
     const sort = {
       [sortBy]: order === "asc" ? 1 : -1,
     };
+    //throw new Error("get list dao");
+    let list = 
+    await super.find(filter, pageInfo, sort);
 
-    return await super.find(filter, pageInfo, sort);
+    list.filter = filter;
+    return list;
   }
 
   async listByCategoryIdList(awid, categoryIdList, sortBy, order, pageInfo) {

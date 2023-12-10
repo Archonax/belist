@@ -58,7 +58,7 @@ class UpdateAbl {
     // hds 5
     const uuIdentity = session.getIdentity().getUuIdentity();
     const isAuthorities = authorizationResult.getAuthorizedProfiles().includes(Profiles.AUTHORITIES);
-    if (uuIdentity !== joke.uuIdentity && !isAuthorities) {
+    if (uuIdentity !== joke.uuIdentity /*&& !isAuthorities*/) {
       // 5.1
       throw new Errors.Update.UserNotAuthorized({ uuAppErrorMap });
     }

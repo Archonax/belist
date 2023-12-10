@@ -53,7 +53,7 @@ class DeleteAbl {
     // hds 4
     const uuIdentity = session.getIdentity().getUuIdentity();
     const isAuthorities = authorizationResult.getAuthorizedProfiles().includes(Profiles.AUTHORITIES);
-    if (uuIdentity !== joke.uuIdentity && !isAuthorities) {
+    if (uuIdentity !== joke.uuIdentity /*&& !isAuthorities*/) {
       // 4.1
       throw new Errors.Delete.UserNotAuthorized({ uuAppErrorMap });
     }

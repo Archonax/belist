@@ -58,6 +58,13 @@ const Get = {
       this.message = "Joke does not exist.";
     }
   },
+  UserNotAuthorized: class extends JokesMainUseCaseError {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}userNotAuthorized`;
+      this.message = "User not authorized.";
+    }
+  }
 };
 
 const Create = {

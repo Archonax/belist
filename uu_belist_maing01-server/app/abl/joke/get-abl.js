@@ -44,11 +44,12 @@ class GetAbl {
 
     // hds 3
     const joke = await this.dao.get(awid, dtoIn.id);
+    
     if (!joke) {
       // 3.1
       throw new Errors.Get.JokeDoesNotExist(uuAppErrorMap, { jokeId: dtoIn.id });
     }
-
+    
     // hds 4
     const dtoOut = {
       ...joke,

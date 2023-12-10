@@ -18,7 +18,7 @@ describe("Testing the init uuCmd...", () => {
       uuAppProfileAuthorities: "urn:uu:GGALL",
     };
     let result = await TestHelper.executePostCommand("sys/uuAppWorkspace/init", dtoIn, session);
-
+    
     expect(result.status).toEqual(200);
     expect(result.data.uuAppErrorMap).toBeDefined();
   });

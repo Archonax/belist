@@ -59,13 +59,13 @@ class ListAbl {
 
     // hds 3
     let list;
-    if (dtoIn.categoryIdList) {
+    //if (dtoIn.categoryIdList) {
       // 3.A
-      list = await this.dao.listByCategoryIdList(awid, dtoIn.categoryIdList, dtoIn.sortBy, dtoIn.order, dtoIn.pageInfo);
-    } else {
+      //list = await this.dao.listByCategoryIdList(awid, dtoIn.categoryIdList, dtoIn.sortBy, dtoIn.order, dtoIn.pageInfo);
+    //} else {
       // 3.B
       list = await this.dao.list(awid, dtoIn.sortBy, dtoIn.order, dtoIn.pageInfo);
-    }
+    //}
 
     // hds 4
     const dtoOut = {

@@ -12,7 +12,7 @@
       },
       "sys/uuAppWorkspace/load": {
         "sysStateList": ["active"],
-        "profileList": ["Executives"]
+        "profileList": ["Executives","Authorities"]
       },
       "sys/uuAppWorkspace/loadBasicData": {
         "sysStateList": ["active"],
@@ -43,23 +43,23 @@
       },
       "shoppinglist/create": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities","Executives","Public"]
+        "profileList": ["Authorities","Executives","Authenticated"]
       },
       "shoppinglist/delete": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities","Executives","Public"]
+        "profileList": ["Authorities","Executives","Authenticated"]
       },
       "shoppinglist/archive": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities","Executives","Public"]
+        "profileList": ["Authorities","Executives","Authenticated"]
       },
       "shoppinglist/get": {
         "sysStateList": ["active"],
-        "profileList": ["Public","Executives","Authorities"]
+        "profileList": ["Authenticated","Executives","Authorities"]
       },
       "shoppinglist/menu": {
         "sysStateList": ["active"],
-        "profileList": ["Public","Executives","Authorities"]
+        "profileList": ["Authenticated","Executives","Authorities"]
       },
       "shoppinglist/invite": {
         "sysStateList": ["active"],
