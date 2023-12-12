@@ -35,6 +35,22 @@ describe("Testing the create uuCmd...", () => {
     expect(result.text).toEqual("TEST TEXT");
     expect(result.data.uuAppErrorMap).toBeDefined();
   });
+  test("extra parameter (warning)", async () => {
+    let session = await TestHelper.login("AwidLicenseOwner", false, false);
+
+    let dtoIn = {
+        "name":"test name",
+        "text":"TEST TEXT",
+        "categoryIdList":["615d7540917ec500271203c0","615d7540917ec500271203c1"],
+        "extra":"extra"
+    };
+    let result = await TestHelper.executePostCommand("shoppinglist/create/", dtoIn, session);
+    //console.log(result);
+    expect(result.status).toEqual(200);
+    expect(result.name).toEqual("test name");
+    expect(result.text).toEqual("TEST TEXT");
+    expect(result.data.uuAppErrorMap).toMatchObject({"uu-belist-main/joke/create/unsupportedKeys": {"message": "DtoIn contains unsupported keys.", "paramMap": {"unsupportedKeyList": ["$.extra"]}, "type": "warning"}});
+  });
   test("invalid dtoIn", async () => {
     let session = await TestHelper.login("AwidLicenseOwner", false, false);
 

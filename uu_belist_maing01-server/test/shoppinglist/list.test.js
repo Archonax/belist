@@ -54,6 +54,40 @@ describe("Testing the list uuCmd...", () => {
     expect(result.itemList).toBeDefined();
     expect(result.data.uuAppErrorMap).toBeDefined();
   });
+  test("extra parameter (warning)", async () => {
+    let session = await TestHelper.login("AwidLicenseOwner", false, false);
+    let dtoIn2 = {
+        "name":"test name",
+        "text":"TEST TEXT",
+        "categoryIdList":["615d7540917ec500271203c0","615d7540917ec500271203c1"]
+    };
+    
+    let result2 = await TestHelper.executePostCommand("shoppinglist/create/", dtoIn2, session);
+    let dtoIn3 = {
+        "name":"test name a",
+        "text":"TEST TEXT a",
+        "categoryIdList":["615d7540917ec500271203c2","615d7540917ec500271203c1"]
+    };
+    
+    let result3 = await TestHelper.executePostCommand("shoppinglist/create/", dtoIn3, session);
+    //let listid =  result2.id;
+    let dtoIn = {
+  
+        "sortBy": "name",
+        "order": "asc",
+        "categoryIdList":["615d7540917ec500271203c1"],
+        "extra":"extra",
+        "pageInfo":{
+            
+        "pageIndex": 0,
+        "pageSize": 20
+        }
+    }
+    let result = await TestHelper.executeGetCommand("shoppinglist/menu/", dtoIn, session);
+    expect(result.status).toEqual(200);
+    expect(result.itemList).toBeDefined();
+    expect(result.data.uuAppErrorMap).toMatchObject({"uu-belist-main/joke/list/unsupportedKeys": {"message": "DtoIn contains unsupported keys.", "paramMap": {"unsupportedKeyList": ["$.extra"]}, "type": "warning"}});
+  });
   test("invalid dtoIn", async () => {
     let session = await TestHelper.login("AwidLicenseOwner", false, false);
     let dtoIn2 = {
